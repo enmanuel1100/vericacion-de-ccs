@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validador de Tarjetas Bancarias</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="binary-background" id="binary"></div>
+    
+    <div class="container">
+        <h1>Validador de Tarjetas Bancarias</h1>
+        
+        <div class="tabs">
+            <div class="tab active" id="tab-basic">Validar Número</div>
+            <div class="tab" id="tab-complete">Validación Completa</div>
+        </div>
+        
+        <div class="card-types">
+            <img src="img/visa.svg" class="card-icon" id="visa-icon" alt="Visa">
+            <img src="img/mastercard.svg" class="card-icon" id="mastercard-icon" alt="Mastercard">
+            <img src="img/amex.svg" class="card-icon" id="amex-icon" alt="American Express">
+            <img src="img/discover.svg" class="card-icon" id="discover-icon" alt="Discover">
+        </div>
+        
+        <div class="tab-content active" id="content-basic">
+            <div class="form-group">
+                <label for="card-number-basic">Número de Tarjeta</label>
+                <input type="text" id="card-number-basic" placeholder="Ingrese el número de tarjeta" maxlength="19">
+            </div>
+            
+            <button id="validate-basic">Validar Tarjeta</button>
+            
+            <div class="result" id="result-basic"></div>
+        </div>
+        
+        <div class="tab-content" id="content-complete">
+            <div class="form-group">
+                <label for="card-number-complete">Número de Tarjeta</label>
+                <input type="text" id="card-number-complete" placeholder="Ingrese el número de tarjeta" maxlength="19">
+            </div>
+            
+            <div class="inline-inputs">
+                <div class="form-group">
+                    <label for="card-expiry">Fecha de Expiración (MM/AA)</label>
+                    <input type="text" id="card-expiry" placeholder="MM/AA" maxlength="5">
+                </div>
+                
+                <div class="form-group">
+                    <label for="card-cvv">CVV</label>
+                    <input type="text" id="card-cvv" placeholder="CVV" maxlength="4">
+                </div>
+            </div>
+            
+            <button id="validate-complete">Validar Tarjeta</button>
+            
+            <div class="result" id="result-complete"></div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

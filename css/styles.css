@@ -1,0 +1,169 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0a0a0a;
+    color: #fff;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.binary-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.15;
+    color: #0f0;
+    font-family: monospace;
+    font-size: 14px;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: rgba(20, 20, 20, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+    color: #0f0;
+    margin-bottom: 30px;
+}
+
+.tabs {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.tab {
+    flex: 1;
+    padding: 12px;
+    text-align: center;
+    background-color: #222;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-bottom: 3px solid transparent;
+}
+
+.tab.active {
+    border-bottom: 3px solid #0f0;
+    background-color: #333;
+}
+
+.tab:hover {
+    background-color: #333;
+}
+
+.tab-content {
+    display: none;
+    animation: fadeIn 0.5s;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #0f0;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #444;
+    background-color: #222;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #0f0;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+}
+
+.inline-inputs {
+    display: flex;
+    gap: 10px;
+}
+
+.inline-inputs .form-group {
+    flex: 1;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    background-color: #0f0;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #00cc00;
+}
+
+.result {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    display: none;
+}
+
+.valid {
+    background-color: rgba(0, 255, 0, 0.2);
+    border: 1px solid #0f0;
+    color: #0f0;
+}
+
+.invalid {
+    background-color: rgba(255, 0, 0, 0.2);
+    border: 1px solid #f00;
+    color: #f00;
+}
+
+.card-icon {
+    height: 30px;
+    margin-right: 10px;
+    vertical-align: middle;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+}
+
+.detected {
+    opacity: 1;
+}
+
+.card-types {
+    text-align: center;
+    margin-bottom: 20px;
+}
